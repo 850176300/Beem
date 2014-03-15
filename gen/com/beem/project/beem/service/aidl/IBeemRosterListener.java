@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: E:\\androidworkspace\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IBeemRosterListener.aidl
+ * Original file: C:\\Users\\liuwei\\Documents\\GitHub\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IBeemRosterListener.aidl
  */
 package com.beem.project.beem.service.aidl;
 public interface IBeemRosterListener extends android.os.IInterface
@@ -23,13 +23,13 @@ public static com.beem.project.beem.service.aidl.IBeemRosterListener asInterface
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof com.beem.project.beem.service.aidl.IBeemRosterListener))) {
 return ((com.beem.project.beem.service.aidl.IBeemRosterListener)iin);
 }
 return new com.beem.project.beem.service.aidl.IBeemRosterListener.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -93,7 +93,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -101,7 +101,7 @@ public java.lang.String getInterfaceDescriptor()
 {
 return DESCRIPTOR;
 }
-public void onEntriesAdded(java.util.List<java.lang.String> addresses) throws android.os.RemoteException
+@Override public void onEntriesAdded(java.util.List<java.lang.String> addresses) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -116,7 +116,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void onEntriesUpdated(java.util.List<java.lang.String> addresses) throws android.os.RemoteException
+@Override public void onEntriesUpdated(java.util.List<java.lang.String> addresses) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -131,7 +131,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void onEntriesDeleted(java.util.List<java.lang.String> addresses) throws android.os.RemoteException
+@Override public void onEntriesDeleted(java.util.List<java.lang.String> addresses) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -146,7 +146,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void onPresenceChanged(com.beem.project.beem.service.PresenceAdapter presence) throws android.os.RemoteException
+@Override public void onPresenceChanged(com.beem.project.beem.service.PresenceAdapter presence) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();

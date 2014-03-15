@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: E:\\androidworkspace\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IPrivacyListManager.aidl
+ * Original file: C:\\Users\\liuwei\\Documents\\GitHub\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IPrivacyListManager.aidl
  */
 package com.beem.project.beem.service.aidl;
 public interface IPrivacyListManager extends android.os.IInterface
@@ -23,13 +23,13 @@ public static com.beem.project.beem.service.aidl.IPrivacyListManager asInterface
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof com.beem.project.beem.service.aidl.IPrivacyListManager))) {
 return ((com.beem.project.beem.service.aidl.IPrivacyListManager)iin);
 }
 return new com.beem.project.beem.service.aidl.IPrivacyListManager.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -188,7 +188,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -196,7 +196,7 @@ public java.lang.String getInterfaceDescriptor()
 {
 return DESCRIPTOR;
 }
-public void createPrivacyList(java.lang.String listName, java.util.List<com.beem.project.beem.service.PrivacyListItem> items) throws android.os.RemoteException
+@Override public void createPrivacyList(java.lang.String listName, java.util.List<com.beem.project.beem.service.PrivacyListItem> items) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -212,7 +212,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void removePrivacyList(java.lang.String listName) throws android.os.RemoteException
+@Override public void removePrivacyList(java.lang.String listName) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -227,7 +227,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void editPrivacyList(java.lang.String listName, java.util.List<com.beem.project.beem.service.PrivacyListItem> items) throws android.os.RemoteException
+@Override public void editPrivacyList(java.lang.String listName, java.util.List<com.beem.project.beem.service.PrivacyListItem> items) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -243,7 +243,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public java.lang.String getActivePrivacyList() throws android.os.RemoteException
+@Override public java.lang.String getActivePrivacyList() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -260,7 +260,7 @@ _data.recycle();
 }
 return _result;
 }
-public java.lang.String getDefaultPrivacyList() throws android.os.RemoteException
+@Override public java.lang.String getDefaultPrivacyList() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -277,7 +277,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setActivePrivacyList(java.lang.String listName) throws android.os.RemoteException
+@Override public void setActivePrivacyList(java.lang.String listName) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -292,7 +292,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void setDefaultPrivacyList(java.lang.String listName) throws android.os.RemoteException
+@Override public void setDefaultPrivacyList(java.lang.String listName) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -307,7 +307,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void declineActivePrivacyList() throws android.os.RemoteException
+@Override public void declineActivePrivacyList() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -321,7 +321,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void declineDefaultPrivacyList() throws android.os.RemoteException
+@Override public void declineDefaultPrivacyList() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -335,7 +335,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public java.util.List<java.lang.String> getPrivacyLists() throws android.os.RemoteException
+@Override public java.util.List<java.lang.String> getPrivacyLists() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -352,7 +352,7 @@ _data.recycle();
 }
 return _result;
 }
-public void blockUser(java.lang.String listName, java.lang.String jid) throws android.os.RemoteException
+@Override public void blockUser(java.lang.String listName, java.lang.String jid) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -368,7 +368,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public java.util.List<java.lang.String> getBlockedUsersByList(java.lang.String listName) throws android.os.RemoteException
+@Override public java.util.List<java.lang.String> getBlockedUsersByList(java.lang.String listName) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -386,7 +386,7 @@ _data.recycle();
 }
 return _result;
 }
-public java.util.List<java.lang.String> getBlockedGroupsByList(java.lang.String listName) throws android.os.RemoteException
+@Override public java.util.List<java.lang.String> getBlockedGroupsByList(java.lang.String listName) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -404,7 +404,7 @@ _data.recycle();
 }
 return _result;
 }
-public void addPrivacyListListener(com.beem.project.beem.service.aidl.IPrivacyListListener listener) throws android.os.RemoteException
+@Override public void addPrivacyListListener(com.beem.project.beem.service.aidl.IPrivacyListListener listener) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -419,7 +419,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void removePrivacyListListener(com.beem.project.beem.service.aidl.IPrivacyListListener listener) throws android.os.RemoteException
+@Override public void removePrivacyListListener(com.beem.project.beem.service.aidl.IPrivacyListListener listener) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();

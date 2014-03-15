@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: E:\\androidworkspace\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IChatManager.aidl
+ * Original file: C:\\Users\\liuwei\\Documents\\GitHub\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IChatManager.aidl
  */
 package com.beem.project.beem.service.aidl;
 /**
@@ -27,13 +27,13 @@ public static com.beem.project.beem.service.aidl.IChatManager asInterface(androi
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof com.beem.project.beem.service.aidl.IChatManager))) {
 return ((com.beem.project.beem.service.aidl.IChatManager)iin);
 }
 return new com.beem.project.beem.service.aidl.IChatManager.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -132,7 +132,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -146,7 +146,7 @@ return DESCRIPTOR;
     	 * @param listener	the callback to call when a new message comes from this chat session
     	 * @return 		the chat session
     	 */
-public com.beem.project.beem.service.aidl.IChat createChat(com.beem.project.beem.service.Contact contact, com.beem.project.beem.service.aidl.IMessageListener listener) throws android.os.RemoteException
+@Override public com.beem.project.beem.service.aidl.IChat createChat(com.beem.project.beem.service.Contact contact, com.beem.project.beem.service.aidl.IMessageListener listener) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -175,7 +175,7 @@ return _result;
 	 * Get an existing Chat session with a contact.
 	 * @return null if the chat session does not exist.
 	 */
-public com.beem.project.beem.service.aidl.IChat getChat(com.beem.project.beem.service.Contact contact) throws android.os.RemoteException
+@Override public com.beem.project.beem.service.aidl.IChat getChat(com.beem.project.beem.service.Contact contact) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -203,7 +203,7 @@ return _result;
     	 * Destroy a chat session with a contact.
     	 * @param chat	the chat session
     	 */
-public void destroyChat(com.beem.project.beem.service.aidl.IChat chat) throws android.os.RemoteException
+@Override public void destroyChat(com.beem.project.beem.service.aidl.IChat chat) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -221,7 +221,7 @@ _data.recycle();
 /**
 	 * @param chat the chat.
          */
-public void deleteChatNotification(com.beem.project.beem.service.aidl.IChat chat) throws android.os.RemoteException
+@Override public void deleteChatNotification(com.beem.project.beem.service.aidl.IChat chat) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -240,7 +240,7 @@ _data.recycle();
 	 * Register a callback to call when a new chat session is created.
 	 * @param listener	the callback to add
 	 */
-public void addChatCreationListener(com.beem.project.beem.service.aidl.IChatManagerListener listener) throws android.os.RemoteException
+@Override public void addChatCreationListener(com.beem.project.beem.service.aidl.IChatManagerListener listener) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -259,7 +259,7 @@ _data.recycle();
 	 * Remove a callback for the creation of new chat session.
 	 * @param listener	the callback to remove.
 	 */
-public void removeChatCreationListener(com.beem.project.beem.service.aidl.IChatManagerListener listener) throws android.os.RemoteException
+@Override public void removeChatCreationListener(com.beem.project.beem.service.aidl.IChatManagerListener listener) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -278,7 +278,7 @@ _data.recycle();
 	 * Get a list of contact which we are currently chatting.
 	 * @return list of contact.
 	 */
-public java.util.List<com.beem.project.beem.service.Contact> getOpenedChatList() throws android.os.RemoteException
+@Override public java.util.List<com.beem.project.beem.service.Contact> getOpenedChatList() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();

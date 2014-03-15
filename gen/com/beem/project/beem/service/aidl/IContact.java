@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: E:\\androidworkspace\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IContact.aidl
+ * Original file: C:\\Users\\liuwei\\Documents\\GitHub\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IContact.aidl
  */
 package com.beem.project.beem.service.aidl;
 public interface IContact extends android.os.IInterface
@@ -23,13 +23,13 @@ public static com.beem.project.beem.service.aidl.IContact asInterface(android.os
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof com.beem.project.beem.service.aidl.IContact))) {
 return ((com.beem.project.beem.service.aidl.IContact)iin);
 }
 return new com.beem.project.beem.service.aidl.IContact.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -69,7 +69,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -77,7 +77,7 @@ public java.lang.String getInterfaceDescriptor()
 {
 return DESCRIPTOR;
 }
-public java.lang.String getJID() throws android.os.RemoteException
+@Override public java.lang.String getJID() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -94,7 +94,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setJID(java.lang.String mjid) throws android.os.RemoteException
+@Override public void setJID(java.lang.String mjid) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();

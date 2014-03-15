@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: E:\\androidworkspace\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IBeemConnectionListener.aidl
+ * Original file: C:\\Users\\liuwei\\Documents\\GitHub\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IBeemConnectionListener.aidl
  */
 package com.beem.project.beem.service.aidl;
 /**
@@ -27,13 +27,13 @@ public static com.beem.project.beem.service.aidl.IBeemConnectionListener asInter
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof com.beem.project.beem.service.aidl.IBeemConnectionListener))) {
 return ((com.beem.project.beem.service.aidl.IBeemConnectionListener)iin);
 }
 return new com.beem.project.beem.service.aidl.IBeemConnectionListener.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -102,7 +102,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -113,7 +113,7 @@ return DESCRIPTOR;
 /**
      *  Callback to call when the connection is closed
      */
-public void connectionClosed() throws android.os.RemoteException
+@Override public void connectionClosed() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -135,7 +135,7 @@ _data.recycle();
 /**
      *  Callback to call when the connection is closed on error
      */
-public void connectionClosedOnError() throws android.os.RemoteException
+@Override public void connectionClosedOnError() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -152,7 +152,7 @@ _data.recycle();
 /**
      * Callback to call when trying to reconnecting
      */
-public void reconnectingIn(int seconds) throws android.os.RemoteException
+@Override public void reconnectingIn(int seconds) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -170,7 +170,7 @@ _data.recycle();
 /**
      *  Callback to call when the reconnection has failed
      */
-public void reconnectionFailed() throws android.os.RemoteException
+@Override public void reconnectionFailed() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -187,7 +187,7 @@ _data.recycle();
 /**
      *  Callback to call when the reconnection is successfull
      */
-public void reconnectionSuccessful() throws android.os.RemoteException
+@Override public void reconnectionSuccessful() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -204,7 +204,7 @@ _data.recycle();
 /**
      *  Callback to call when the connection Failed
      */
-public void connectionFailed(java.lang.String errorMsg) throws android.os.RemoteException
+@Override public void connectionFailed(java.lang.String errorMsg) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();

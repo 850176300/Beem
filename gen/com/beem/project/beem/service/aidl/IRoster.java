@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: E:\\androidworkspace\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IRoster.aidl
+ * Original file: C:\\Users\\liuwei\\Documents\\GitHub\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IRoster.aidl
  */
 package com.beem.project.beem.service.aidl;
 public interface IRoster extends android.os.IInterface
@@ -23,13 +23,13 @@ public static com.beem.project.beem.service.aidl.IRoster asInterface(android.os.
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof com.beem.project.beem.service.aidl.IRoster))) {
 return ((com.beem.project.beem.service.aidl.IRoster)iin);
 }
 return new com.beem.project.beem.service.aidl.IRoster.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -188,7 +188,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -196,7 +196,7 @@ public java.lang.String getInterfaceDescriptor()
 {
 return DESCRIPTOR;
 }
-public boolean addContact(java.lang.String user, java.lang.String name, java.lang.String[] groups) throws android.os.RemoteException
+@Override public boolean addContact(java.lang.String user, java.lang.String name, java.lang.String[] groups) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -216,7 +216,7 @@ _data.recycle();
 }
 return _result;
 }
-public void deleteContact(com.beem.project.beem.service.Contact contact) throws android.os.RemoteException
+@Override public void deleteContact(com.beem.project.beem.service.Contact contact) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -237,7 +237,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public com.beem.project.beem.service.Contact getContact(java.lang.String jid) throws android.os.RemoteException
+@Override public com.beem.project.beem.service.Contact getContact(java.lang.String jid) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -260,7 +260,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setContactName(java.lang.String jid, java.lang.String name) throws android.os.RemoteException
+@Override public void setContactName(java.lang.String jid, java.lang.String name) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -276,7 +276,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void createGroup(java.lang.String groupname) throws android.os.RemoteException
+@Override public void createGroup(java.lang.String groupname) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -291,7 +291,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void addContactToGroup(java.lang.String groupName, java.lang.String jid) throws android.os.RemoteException
+@Override public void addContactToGroup(java.lang.String groupName, java.lang.String jid) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -307,7 +307,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void removeContactFromGroup(java.lang.String groupName, java.lang.String jid) throws android.os.RemoteException
+@Override public void removeContactFromGroup(java.lang.String groupName, java.lang.String jid) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -323,7 +323,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public java.util.List<com.beem.project.beem.service.Contact> getContactList() throws android.os.RemoteException
+@Override public java.util.List<com.beem.project.beem.service.Contact> getContactList() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -340,7 +340,7 @@ _data.recycle();
 }
 return _result;
 }
-public java.util.List<java.lang.String> getGroupsNames() throws android.os.RemoteException
+@Override public java.util.List<java.lang.String> getGroupsNames() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -357,7 +357,7 @@ _data.recycle();
 }
 return _result;
 }
-public com.beem.project.beem.service.PresenceAdapter getPresence(java.lang.String jid) throws android.os.RemoteException
+@Override public com.beem.project.beem.service.PresenceAdapter getPresence(java.lang.String jid) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -380,7 +380,7 @@ _data.recycle();
 }
 return _result;
 }
-public void addRosterListener(com.beem.project.beem.service.aidl.IBeemRosterListener listen) throws android.os.RemoteException
+@Override public void addRosterListener(com.beem.project.beem.service.aidl.IBeemRosterListener listen) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -395,7 +395,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void removeRosterListener(com.beem.project.beem.service.aidl.IBeemRosterListener listen) throws android.os.RemoteException
+@Override public void removeRosterListener(com.beem.project.beem.service.aidl.IBeemRosterListener listen) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();

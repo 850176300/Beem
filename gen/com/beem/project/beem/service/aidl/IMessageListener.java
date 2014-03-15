@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: E:\\androidworkspace\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IMessageListener.aidl
+ * Original file: C:\\Users\\liuwei\\Documents\\GitHub\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IMessageListener.aidl
  */
 package com.beem.project.beem.service.aidl;
 public interface IMessageListener extends android.os.IInterface
@@ -23,13 +23,13 @@ public static com.beem.project.beem.service.aidl.IMessageListener asInterface(an
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof com.beem.project.beem.service.aidl.IMessageListener))) {
 return ((com.beem.project.beem.service.aidl.IMessageListener)iin);
 }
 return new com.beem.project.beem.service.aidl.IMessageListener.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -86,7 +86,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -99,7 +99,7 @@ return DESCRIPTOR;
 	 * @param chat the chat receiving the message.
 	 * @param msg the message received in the chat.
 	 */
-public void processMessage(com.beem.project.beem.service.aidl.IChat chat, com.beem.project.beem.service.Message msg) throws android.os.RemoteException
+@Override public void processMessage(com.beem.project.beem.service.aidl.IChat chat, com.beem.project.beem.service.Message msg) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -126,7 +126,7 @@ _data.recycle();
 	 * You can use IChat.getState() in order to get the new state.
 	 * @param chat the chat changed.
 	 */
-public void stateChanged(com.beem.project.beem.service.aidl.IChat chat) throws android.os.RemoteException
+@Override public void stateChanged(com.beem.project.beem.service.aidl.IChat chat) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -145,7 +145,7 @@ _data.recycle();
 	 * This method is executed when the otr session status change.
 	 * @param otrState the new state of otr session.
 	 */
-public void otrStateChanged(java.lang.String otrState) throws android.os.RemoteException
+@Override public void otrStateChanged(java.lang.String otrState) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();

@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: E:\\androidworkspace\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IChat.aidl
+ * Original file: C:\\Users\\liuwei\\Documents\\GitHub\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IChat.aidl
  */
 package com.beem.project.beem.service.aidl;
 /**
@@ -26,13 +26,13 @@ public static com.beem.project.beem.service.aidl.IChat asInterface(android.os.IB
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof com.beem.project.beem.service.aidl.IChat))) {
 return ((com.beem.project.beem.service.aidl.IChat)iin);
 }
 return new com.beem.project.beem.service.aidl.IChat.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -198,7 +198,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -210,7 +210,7 @@ return DESCRIPTOR;
     	 * Send a message.
     	 * @param message	the message to send
     	 */
-public void sendMessage(com.beem.project.beem.service.Message message) throws android.os.RemoteException
+@Override public void sendMessage(com.beem.project.beem.service.Message message) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -235,7 +235,7 @@ _data.recycle();
 	 * Get the participant of the chat
 	 * @return the participant
 	 */
-public com.beem.project.beem.service.Contact getParticipant() throws android.os.RemoteException
+@Override public com.beem.project.beem.service.Contact getParticipant() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -261,7 +261,7 @@ return _result;
 	 * Add a message listener.
 	 * @param listener the listener to add.
 	 */
-public void addMessageListener(com.beem.project.beem.service.aidl.IMessageListener listener) throws android.os.RemoteException
+@Override public void addMessageListener(com.beem.project.beem.service.aidl.IMessageListener listener) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -280,7 +280,7 @@ _data.recycle();
 	 * Remove a message listener.
 	 * @param listener the listener to remove.
 	 */
-public void removeMessageListener(com.beem.project.beem.service.aidl.IMessageListener listener) throws android.os.RemoteException
+@Override public void removeMessageListener(com.beem.project.beem.service.aidl.IMessageListener listener) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -295,7 +295,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public java.lang.String getState() throws android.os.RemoteException
+@Override public java.lang.String getState() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -312,7 +312,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setOpen(boolean isOpen) throws android.os.RemoteException
+@Override public void setOpen(boolean isOpen) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -327,7 +327,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public boolean isOpen() throws android.os.RemoteException
+@Override public boolean isOpen() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -344,7 +344,7 @@ _data.recycle();
 }
 return _result;
 }
-public int getUnreadMessageCount() throws android.os.RemoteException
+@Override public int getUnreadMessageCount() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -361,7 +361,7 @@ _data.recycle();
 }
 return _result;
 }
-public void setState(java.lang.String state) throws android.os.RemoteException
+@Override public void setState(java.lang.String state) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -376,7 +376,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public java.util.List<com.beem.project.beem.service.Message> getMessages() throws android.os.RemoteException
+@Override public java.util.List<com.beem.project.beem.service.Message> getMessages() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -396,7 +396,7 @@ return _result;
 /**
 	 * Try to start an OTR session.
 	 */
-public void startOtrSession() throws android.os.RemoteException
+@Override public void startOtrSession() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -413,7 +413,7 @@ _data.recycle();
 /**
 	 * Stop the OTR session.
 	 */
-public void endOtrSession() throws android.os.RemoteException
+@Override public void endOtrSession() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -430,7 +430,7 @@ _data.recycle();
 /**
 	 * get local OTR key fingerprints.
 	 */
-public java.lang.String getLocalOtrFingerprint() throws android.os.RemoteException
+@Override public java.lang.String getLocalOtrFingerprint() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -450,7 +450,7 @@ return _result;
 /**
 	 * get remote OTR key fingerprints.
 	 */
-public java.lang.String getRemoteOtrFingerprint() throws android.os.RemoteException
+@Override public java.lang.String getRemoteOtrFingerprint() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -467,7 +467,7 @@ _data.recycle();
 }
 return _result;
 }
-public void verifyRemoteFingerprint(boolean ok) throws android.os.RemoteException
+@Override public void verifyRemoteFingerprint(boolean ok) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -485,7 +485,7 @@ _data.recycle();
 /**
 	 * get current OTR status.
 	 */
-public java.lang.String getOtrStatus() throws android.os.RemoteException
+@Override public java.lang.String getOtrStatus() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();

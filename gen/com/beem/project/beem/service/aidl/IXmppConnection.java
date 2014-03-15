@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: E:\\androidworkspace\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IXmppConnection.aidl
+ * Original file: C:\\Users\\liuwei\\Documents\\GitHub\\Beem\\src\\com\\beem\\project\\beem\\service\\aidl\\IXmppConnection.aidl
  */
 package com.beem.project.beem.service.aidl;
 public interface IXmppConnection extends android.os.IInterface
@@ -23,13 +23,13 @@ public static com.beem.project.beem.service.aidl.IXmppConnection asInterface(and
 if ((obj==null)) {
 return null;
 }
-android.os.IInterface iin = (android.os.IInterface)obj.queryLocalInterface(DESCRIPTOR);
+android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
 if (((iin!=null)&&(iin instanceof com.beem.project.beem.service.aidl.IXmppConnection))) {
 return ((com.beem.project.beem.service.aidl.IXmppConnection)iin);
 }
 return new com.beem.project.beem.service.aidl.IXmppConnection.Stub.Proxy(obj);
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return this;
 }
@@ -173,7 +173,7 @@ Proxy(android.os.IBinder remote)
 {
 mRemote = remote;
 }
-public android.os.IBinder asBinder()
+@Override public android.os.IBinder asBinder()
 {
 return mRemote;
 }
@@ -181,7 +181,7 @@ public java.lang.String getInterfaceDescriptor()
 {
 return DESCRIPTOR;
 }
-public boolean connect() throws android.os.RemoteException
+@Override public boolean connect() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -198,7 +198,7 @@ _data.recycle();
 }
 return _result;
 }
-public boolean login() throws android.os.RemoteException
+@Override public boolean login() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -215,7 +215,7 @@ _data.recycle();
 }
 return _result;
 }
-public boolean connectSync() throws android.os.RemoteException
+@Override public boolean connectSync() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -232,7 +232,7 @@ _data.recycle();
 }
 return _result;
 }
-public void connectAsync() throws android.os.RemoteException
+@Override public void connectAsync() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -246,7 +246,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public boolean disconnect() throws android.os.RemoteException
+@Override public boolean disconnect() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -263,7 +263,7 @@ _data.recycle();
 }
 return _result;
 }
-public com.beem.project.beem.service.aidl.IRoster getRoster() throws android.os.RemoteException
+@Override public com.beem.project.beem.service.aidl.IRoster getRoster() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -280,7 +280,7 @@ _data.recycle();
 }
 return _result;
 }
-public void addConnectionListener(com.beem.project.beem.service.aidl.IBeemConnectionListener listen) throws android.os.RemoteException
+@Override public void addConnectionListener(com.beem.project.beem.service.aidl.IBeemConnectionListener listen) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -295,7 +295,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void removeConnectionListener(com.beem.project.beem.service.aidl.IBeemConnectionListener listen) throws android.os.RemoteException
+@Override public void removeConnectionListener(com.beem.project.beem.service.aidl.IBeemConnectionListener listen) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -310,7 +310,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public boolean isAuthentificated() throws android.os.RemoteException
+@Override public boolean isAuthentificated() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -327,7 +327,7 @@ _data.recycle();
 }
 return _result;
 }
-public com.beem.project.beem.service.aidl.IChatManager getChatManager() throws android.os.RemoteException
+@Override public com.beem.project.beem.service.aidl.IChatManager getChatManager() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -344,7 +344,7 @@ _data.recycle();
 }
 return _result;
 }
-public void changeStatusAndPriority(int status, java.lang.String msg, int priority) throws android.os.RemoteException
+@Override public void changeStatusAndPriority(int status, java.lang.String msg, int priority) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -361,7 +361,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public void changeStatus(int status, java.lang.String msg) throws android.os.RemoteException
+@Override public void changeStatus(int status, java.lang.String msg) throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -377,7 +377,7 @@ _reply.recycle();
 _data.recycle();
 }
 }
-public com.beem.project.beem.service.aidl.IPrivacyListManager getPrivacyListManager() throws android.os.RemoteException
+@Override public com.beem.project.beem.service.aidl.IPrivacyListManager getPrivacyListManager() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
@@ -394,7 +394,7 @@ _data.recycle();
 }
 return _result;
 }
-public java.lang.String getErrorMessage() throws android.os.RemoteException
+@Override public java.lang.String getErrorMessage() throws android.os.RemoteException
 {
 android.os.Parcel _data = android.os.Parcel.obtain();
 android.os.Parcel _reply = android.os.Parcel.obtain();
